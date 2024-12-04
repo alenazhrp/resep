@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity2"
+    tools:ignore="DuplicateIds">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etRecipeName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/enter_recipe_name"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:entries="@array/categories" />
+
+        <EditText
+            android:id="@+id/etCookingTime"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/enter_cooking_time"
+            android:importantForAutofill="no"
+            android:inputType="number" />
+
+
+        <!-- Input untuk bahan baru -->
+        <EditText
+            android:id="@+id/etNewIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/enter_ingredients"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnAddIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add" />
+
+        <!-- RecyclerView untuk menampilkan bahan yang sudah ditambahkan -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/steps"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:minHeight="150dp"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnSaveRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>

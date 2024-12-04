@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeActivity">
+
+    <!-- ScrollView untuk membuat konten bisa digulirkan -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <!-- Isi konten utama yang digulirkan -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Gambar resep -->
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/pizza_sample"
+                android:background="#F6F6F6"
+                android:scaleType="centerCrop"
+                android:hapticFeedbackEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Tombol kembali -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/card_back_btn"
+                android:clickable="true"
+                android:contentDescription="@string/todo"
+                android:foregroundGravity="center"
+                android:hapticFeedbackEnabled="true"
+                android:padding="4dp"
+                android:src="@drawable/back_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv5" />
+
+            <!-- Judul resep -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv5" />
+
+            <!-- Waktu memasak -->
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <!-- Tombol bahan -->
+            <Button
+                android:id="@+id/btnIngridient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/black"
+                android:text="Bahan"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/time"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Tombol langkah -->
+            <Button
+                android:id="@+id/btnStep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#FFEB3B"
+                android:text="Langkah"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/btnIngridient"
+                app:layout_constraintStart_toEndOf="@id/btnIngridient"
+                android:layout_marginStart="16dp" />
+
+            <!-- ScrollView untuk bahan -->
+            <ScrollView
+                android:id="@+id/scrollIng"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/btnIngridient"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/ing_data"
+                    android:layout_gravity="center_horizontal"
+                    android:lineSpacingExtra="10dp"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
+
+            <!-- ScrollView untuk langkah-langkah -->
+            <ScrollView
+                android:id="@+id/scrollSteps"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/btnStep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/steps_data"
+                    android:layout_gravity="center_horizontal"
+                    android:lineSpacingExtra="10dp"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

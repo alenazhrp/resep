@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "726085181874",
+    "project_id": "my-recipe-bbbe7",
+    "storage_bucket": "my-recipe-bbbe7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726085181874:android:929200e083a0803e6b84ab",
+        "android_client_info": {
+          "package_name": "com.alena.myrecipe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb-SSO1zS74JqjOsl2tqW6lfEWvtlKSpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
